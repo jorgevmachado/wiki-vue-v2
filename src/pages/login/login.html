@@ -1,0 +1,11 @@
+<div id="login">
+  <div class="login-modal">
+    <img src="../../assets/logo.png" alt="logo" width="200"/>
+    <hr>
+    <div class="login-title">Login</div>
+    <input type="text" v-model="user.email" name="email" placeholder="E-mail">
+    <input type="password" v-model="user.password" name="password" placeholder="Senha">
+    <button @click.prevent="login(user)">Entrar</button>
+    <router-link to="/signin">Não tem cadastro ? Registre-se aqui!</router-link>
+  </div>
+</div>

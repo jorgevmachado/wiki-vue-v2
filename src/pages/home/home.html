@@ -1,0 +1,18 @@
+<div id="home">
+  <wiki-title :icon="icon" :title="title" :subTitle="subTitle"></wiki-title>
+  <div class="stats">
+    <wiki-stat title="Categorias"
+               :value="stats.categories"
+               icon="fa fa-folder"
+               color="#d54d50"
+    />
+    <wiki-stat title="Artigos"
+               :value="stats.articles"
+               icon="fa fa-file"
+               color="#3bc480" />
+    <wiki-stat title="Usuários"
+               :value="stats.users"
+               icon="fa fa-user"
+               color="#3282cd" />
+  </div>
+</div>

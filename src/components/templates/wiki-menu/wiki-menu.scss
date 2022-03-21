@@ -1,0 +1,52 @@
+#wiki-menu {
+  grid-area: menu;
+  background: linear-gradient(to right, #232526, #414345);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#wiki-menu a,
+#wiki-menu a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+#wiki-menu .tree-node.selected > .tree-content,
+#wiki-menu .tree-node .tree-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tree-arrow.has-child {
+  filter: brightness(2);
+}
+.tree-anchor {
+  color: #fff!important;
+  text-decoration: none;
+}
+#wiki-menu .menu-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #AAA;
+}
+
+#wiki-menu .menu-filter i {
+  color: #AAA;
+  margin-right: 10px;
+}
+
+#wiki-menu input {
+  color: #CCC;
+  font-size: 1.3rem;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.tree-filter-empty {
+  color: #CCC;
+  font-size: 1.3rem;
+  margin-left: 20px;
+}

@@ -1,0 +1,9 @@
+<div id="wiki-stat">
+  <div class="stat-icon">
+    <i :class="icon" :style="style" v-if="icon"></i>
+  </div>
+  <div class="stat-info">
+    <span class="stat-title" v-if="title">{{ title }}</span>
+    <span class="stat-value" v-if="value">{{ value }}</span>
+  </div>
+</div>

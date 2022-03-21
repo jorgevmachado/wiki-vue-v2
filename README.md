@@ -20,6 +20,10 @@ npm i vue-toasted
 ```
 npm i vue-mq
 ```
+### axios V^0.26.1
+```
+npm i axios
+```
 ### liquor-tree V^0.2.70
 ```
 npm i liquor-tree

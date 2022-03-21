@@ -1,20 +1,23 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+body {
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-areas:
+			"header header"
+			"menu content"
+			"menu footer";
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app.hide-menu {
+  grid-template-areas:
+			"header header"
+			"content content"
+			"footer footer";
 }
