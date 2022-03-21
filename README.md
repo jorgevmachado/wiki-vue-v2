@@ -1,4 +1,5 @@
 # wiki-vue-v2
+### Project construction in Vue 2 in order to study and understand how the framework works, using eslint and prettier and e2e and unit tests
 
 ## Project setup
 ```
@@ -7,7 +8,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm start
 ```
 
 ### Compiles and minifies for production
