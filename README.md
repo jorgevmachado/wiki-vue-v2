@@ -69,6 +69,6 @@ npm run test:e2e
 ```
 npm run lint
 ```
+### Back-end api 
+#### Can be found in the repository [github/wiki-api](https://github.com/jorgevmachado/wiki-api)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
