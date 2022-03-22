@@ -4,4 +4,7 @@
     <input type="text" placeholder="Digite para filtrar..." v-model="treeFilter" class="filter-field">
   </div>
   <Tree :data="treeData" :options="treeOptions" :filter="treeFilter" ref="tree"/>
+  <div class="about">
+    <router-link to="/about">Sobre</router-link>
+  </div>
 </div>

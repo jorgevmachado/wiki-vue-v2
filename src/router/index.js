@@ -4,7 +4,8 @@ import { USERKEY } from "@/constants";
 Vue.use(VueRouter);
 const Home = () =>
   import(/* webpackChunkName: "home" */ "@/pages/home/home.vue");
-const About = () => import(/* webpackChunkName: "about" */ "@/pages/About.vue");
+const About = () =>
+  import(/* webpackChunkName: "about" */ "@/pages/about/about.vue");
 const Login = () =>
   import(/* webpackChunkName: "login" */ "@/pages/login/login.vue");
 const Admin = () =>
