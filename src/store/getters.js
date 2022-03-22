@@ -7,6 +7,7 @@ const limit = (state) => state.limit;
 const count = (state) => state.count;
 const mode = (state) => state.mode;
 const loadMore = (state) => state.loadMore;
+const url = (state) => state.url;
 export default {
   title,
   icon,
@@ -16,4 +17,5 @@ export default {
   count,
   mode,
   loadMore,
+  url,
 };

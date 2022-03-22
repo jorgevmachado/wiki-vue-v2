@@ -13,6 +13,7 @@ import {
   setMenu,
   setMode,
   setpage,
+  setUrl,
 } from "@/store/mutations";
 Vue.use(Vuex);
 
@@ -25,6 +26,7 @@ const createStore = () =>
       count: 0,
       mode: "save",
       loadMore: true,
+      url: "",
     }),
     mutations: {
       setMenu,
@@ -33,6 +35,7 @@ const createStore = () =>
       setLimit,
       setCount,
       setLoadMore,
+      setUrl,
     },
     getters,
     actions,

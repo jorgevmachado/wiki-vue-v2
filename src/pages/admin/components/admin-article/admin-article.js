@@ -31,8 +31,16 @@ export default {
       reset: "reset",
       remove: "remove",
       save: "save",
+      show: "show",
       loadCategories: "category/index",
     }),
+    load(article, mode = "save") {
+      this.show({
+        store: this.type,
+        mode: mode,
+        id: article.id,
+      });
+    },
   },
   watch: {
     page() {

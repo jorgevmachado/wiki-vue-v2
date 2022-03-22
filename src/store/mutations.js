@@ -16,3 +16,4 @@ export const setMode = (state, value) => (state.mode = value);
 export const setLimit = (state, value) => (state.limit = value);
 export const setCount = (state, value) => (state.count = value);
 export const setLoadMore = (state, value) => (state.loadMore = value);
+export const setUrl = (state, value) => (state.url = value);
