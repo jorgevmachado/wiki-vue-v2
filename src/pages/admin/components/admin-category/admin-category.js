@@ -30,11 +30,11 @@ export default {
       show: "show",
       remove: "remove",
     }),
-    load(category, mode = "save") {
+    load(data, mode = "save") {
       this.show({
         store: this.type,
         mode: mode,
-        data: category,
+        data: data,
       });
     },
   },

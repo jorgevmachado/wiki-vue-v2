@@ -9,7 +9,7 @@ export default {
   name: "app",
   computed: mapGetters({
     title: "title",
-    user: "user/user",
+    user: "user/superUser",
     token: "user/token",
     validatingToken: "user/validatingToken",
     isMenuVisible: "isMenuVisible",

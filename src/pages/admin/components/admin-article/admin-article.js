@@ -34,11 +34,11 @@ export default {
       show: "show",
       loadCategories: "category/index",
     }),
-    load(article, mode = "save") {
+    load(data, mode = "save") {
       this.show({
         store: this.type,
         mode: mode,
-        data: article,
+        data: data,
       });
     },
   },
