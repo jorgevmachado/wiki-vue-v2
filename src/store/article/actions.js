@@ -14,9 +14,9 @@ const index = ({ commit, dispatch, state, rootGetters }) => {
     commit("setLimit", res.data.per_page, { root: true });
   });
 };
-const show = ({ commit, dispatch, rootGetters, state }, id) => {
+const show = async ({ commit, dispatch, state, rootGetters }, data) => {
   const method = GET;
-  id = id !== undefined ? id : 0;
+  const id = data.data.id !== undefined ? data.data.id : 0;
   dispatch(
     "mountUrl",
     { api: state.api, type: "show", id: id },
@@ -24,15 +24,16 @@ const show = ({ commit, dispatch, rootGetters, state }, id) => {
   );
   axios[method](rootGetters.url)
     .then((res) => {
-      const article = res.data;
-      article.category_id = article.category.id;
-      commit("setArticle", article);
+      const data = res.data;
+      data.category_id = data.category.id;
+      commit("setArticle", data);
     })
     .catch(showError);
 };
-const remove = ({ dispatch, state, rootGetters }, id) => {
+const remove = async ({ dispatch, state, rootGetters }, data) => {
   const method = DELETE;
-  id = id === 0 ? state.article.id : id;
+  const id = data.id ? data.id : state.article.id;
+
   dispatch(
     "mountUrl",
     { id: id, api: state.api, type: method },
@@ -50,7 +51,7 @@ const reset = ({ commit, dispatch }) => {
   commit("setArticle", {});
   dispatch("index");
 };
-const save = ({ state, dispatch, rootGetters }) => {
+const save = ({ dispatch, state, rootGetters }) => {
   const method = state.article.id ? PUT : POST;
   const data =
     method === POST

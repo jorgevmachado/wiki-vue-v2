@@ -38,7 +38,7 @@ export default {
       this.show({
         store: this.type,
         mode: mode,
-        id: article.id,
+        data: article,
       });
     },
   },

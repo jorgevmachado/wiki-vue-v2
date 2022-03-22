@@ -34,7 +34,7 @@ export default {
       this.show({
         store: this.type,
         mode: mode,
-        id: category.id,
+        data: category,
       });
     },
   },
