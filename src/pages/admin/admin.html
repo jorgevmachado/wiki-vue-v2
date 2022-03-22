@@ -1,0 +1,18 @@
+<div id="admin">
+  <wiki-title :icon="icon" :title="title" :subTitle="subTitle"/>
+  <div class="admin-pages-tabs">
+    <b-card no-body>
+      <b-tabs card>
+        <b-tab title="Artigos" active>
+          <admin-article/>
+        </b-tab>
+        <b-tab title="Categorias">
+          <admin-category/>
+        </b-tab>
+        <b-tab title="Usuários">
+          <admin-user/>
+        </b-tab>
+      </b-tabs>
+    </b-card>
+  </div>
+</div>

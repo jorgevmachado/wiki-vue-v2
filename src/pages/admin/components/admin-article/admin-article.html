@@ -1,0 +1,54 @@
+<div id="admin-article">
+  <b-form>
+    <input id="article-id" type="hidden" v-model="article.id" />
+    <b-form-group label="Nome:" label-for="article-name">
+      <b-form-input id="article-name"
+                    type="text"
+                    v-model="article.name"
+                    placeholder="Informe o Nome do Artigo..."
+                    :readonly="mode === 'remove'"
+                    required/>
+    </b-form-group>
+    <b-form-group label="Descrição:" label-for="article-description">
+      <b-form-input id="article-description"
+                    type="text"
+                    v-model="article.description"
+                    placeholder="Informe a Descrição do Artigo..."
+                    :readonly="mode === 'remove'"
+                    required/>
+    </b-form-group>
+    <b-form-group v-if="mode === 'save'" label="Imagem (URL):" label-for="article-imageUrl">
+      <b-form-input id="article-imageUrl"
+                    type="text"
+                    v-model="article.image_url"
+                    placeholder="Informe a URL da Imagem..."
+                    :readonly="mode === 'remove'"
+                    required/>
+    </b-form-group>
+    <b-form-group v-if="mode === 'save'" label="Categoria:" label-for="article-categoryId">
+      <b-form-select id="article-categoryId" :options="categories" v-model="article.category_id"/>
+    </b-form-group>
+    <b-form-group v-if="mode === 'save'" label="Conteúdo" label-for="article-content">
+      <VueEditor v-model="article.content" placeholder="Informe o Conteúdo do Artigo..."/>
+    </b-form-group>
+    <b-button variant="primary" v-if="mode === 'save'" @click="save(type)">
+      Salvar
+    </b-button>
+    <b-button variant="danger" v-if="mode === 'remove'" @click="remove(type)">
+      Excluir
+    </b-button>
+    <b-button class="ml-2" @click="reset(type)">Cancelar</b-button>
+  </b-form>
+  <hr>
+  <b-table hover striped :items="articles" :fields="fields">
+    <template #cell(actions)="data">
+      <b-button variant="warning" @click="loadArticle(data.item)" class="mr-2">
+        <i class="fa fa-pencil"></i>
+      </b-button>
+      <b-button variant="danger" @click="loadArticle(data.item, 'remove')">
+        <i class="fa fa-trash"></i>
+      </b-button>
+    </template>
+  </b-table>
+  <b-pagination size="md" v-model="page" :total-rows="count" :per-page="limit" />
+</div>

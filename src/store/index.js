@@ -5,6 +5,7 @@ import actions from "@/store/actions";
 import user from "@/store/user";
 import stat from "@/store/stat";
 import category from "@/store/category";
+import article from "@/store/article";
 import {
   setCount,
   setLimit,
@@ -39,6 +40,7 @@ const createStore = () =>
       user,
       stat,
       category,
+      article,
     },
   });
 export default createStore;
