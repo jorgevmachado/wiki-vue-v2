@@ -29,15 +29,11 @@ const validateToken = async ({ commit }) => {
     .then((res) => {
       if (res.data) {
         commit("setSuperUser", userData);
-        if (this.$mq === "xs" || this.$mq === "sm") {
-          commit("toggleMenu", false);
-        }
       }
     })
     .catch(() => {
-      console.log(`x`);
-      // localStorage.removeItem(USERKEY);
-      // router.push({ name: "login" });
+      localStorage.removeItem(USERKEY);
+      router.push({ name: "login" });
     });
   commit("setValidatingToken", false);
 };

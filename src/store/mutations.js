@@ -1,5 +1,5 @@
 export const setMenu = (state, isVisible) => {
-  if (!state.user.user) {
+  if (!state.user.superUser) {
     state.isMenuVisible = false;
     return;
   }

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const setSuperUser = (state, user) => {
-  state.user = user;
+  state.superUser = user;
   if (user) {
     axios.defaults.headers.common["Authorization"] = `bearer ${user.token}`;
     state.isMenuVisible = true;

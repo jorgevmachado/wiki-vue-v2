@@ -17,6 +17,9 @@ export default {
   methods: mapActions({ validateToken: "user/validateToken" }),
   created() {
     this.validateToken();
+    if (this.$mq === "xs" || this.$mq === "sm") {
+      this.$store.commit("setMenu", false, { root: true });
+    }
   },
   components: { wikiHeader, wikiMenu, wikiContent, wikiLoading, wikiFooter },
 };
